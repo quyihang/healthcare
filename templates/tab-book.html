@@ -1,0 +1,21 @@
+<ion-view view-title="好食">
+    <ion-nav-bar class="bar-stable  bar-balanced bar  " style="text-align:left;color :#3FB869;">
+
+    </ion-nav-bar>
+
+    <ion-content class="stable-bg">
+        <ion-list>
+           
+            <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/book/canteen/{{ item.id}}" ng-repeat="item in meals">
+                <div class=" col-center row" ng-model=" data.text" style="justify-content:space-between" >{{ item.text }}
+                <div class="green">{{item.info}}</div></div>
+                <i class="icon  icon-accessory" ng-class="hasinfo({{item.id}})? 'ion-chevron-right' : 'ion-plus'"></i>
+            </ion-item>
+          
+
+
+
+        </ion-list>
+    </ion-content>
+</ion-view>
+

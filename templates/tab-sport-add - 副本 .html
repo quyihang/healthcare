@@ -1,0 +1,79 @@
+<ion-view view-title="运动" hide-tabs>
+    <ion-nav-bar class="bar-health bar-balanced bar-stable  bar ">
+        <ion-nav-back-button>
+            返回
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+
+    <ion-content >
+        <div>
+    
+            <div  class="bar bar-header item-input-inset">
+                <div class="item-input-wrapper">
+                    <i class="fa fa-search placeholder-icon"></i>
+                    <input type="search"
+                           placeholder="搜索"
+                           ng-model="search"
+                           
+                           class="full-width">
+                    <i ng-show="search.length"
+                            class=" ion-android-close input-button"
+                            ng-click="search = ''"></i>
+                </div>
+                
+            </div>
+           
+            <div>
+                <div class="">
+                    <div class=" tabs-top tabs-color-light" ion-affix>
+                        <div class="rowline " a style=" display: flex;">
+                            <div class="tab-sport col " ng-class="{'active': activeTab == 0 } " ng-click="slideTo(0)">
+                                常见
+                            </div>
+                            <div class="tab-sport col" ng-class="{'active': activeTab == 1 }" ng-click="slideTo(1)">
+                                我的
+                            </div>
+                        </div>
+                    </div>
+                    <ion-slide-box show-pager="false" on-slide-changed = "onSlideChanged($index)" >
+                        <ion-slide style="display:block" >
+                            <ion-item class="item-icon-left item-icon-right " ng-click="openModal({{item.id}})" ng-repeat=" item in sportitems | filter:{ name: search } as results" style=" font-size:14px;">
+                                <i class="icon {{item.icon}}"></i>
+                                <div class="row" style="justify-content:space-between">
+                                    <div class="col-33"> {{item.name}}</div>
+                                    <div class="col-33"> {{item.proqk}}千卡/60分钟</div>
+                                </div>
+                               
+                            </ion-item>
+                            <ion-item class="item-borderless" ng-if="results.length == 0">
+                                <div class="padding mid"> 未查找到相应运动</div>
+                              
+                            </ion-item>
+                        </ion-slide>
+                        <ion-slide>
+                            <ion-item class="item-icon-left item-icon-right" ng-click="openModal({{item.id}})" ng-repeat="item in usersportitems | filter:{ name :search } as meresults " style=" font-size:14px;">
+                                <i class="icon {{item.icon}}"></i>
+                                <div class="row" style="justify-content:space-between">
+                                    <div class="col-33"> {{item.name}}</div>
+                                    <div class="col-33"> {{item.proqk}}千卡/60分钟</div>
+                                </div>
+
+
+
+                            </ion-item>
+                            <ion-item class="item-borderless" ng-if="meresults.length == 0">
+                                <div class="padding mid"> 未查找到相应运动</div>
+
+                            </ion-item>
+                        </ion-slide>
+                    </ion-slide-box>    
+                    
+                    </div>
+                
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>
+

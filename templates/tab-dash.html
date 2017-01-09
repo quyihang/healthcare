@@ -1,0 +1,126 @@
+<ion-view class="background" view-title="Dashboard">
+    <ion-header-bar class="bar bar-header item-input-inset bar-balanced startbar" >
+        <a class="col-25 " style="text-align:center ; color :white;vertical-align :middle ; ">
+            今天吃啥
+        </a>
+        <label class="item-input-wrapper " style="margin-top :2px;margin-bottom :2px;">
+            <i class="fa fa-search placeholder-icon" style="color :#3fb869;font-size :18px;"></i>
+            <input type="search" placeholder="搜索健康美味" ng-focus="openModal();search = ''" readonly="readonly">
+            <i ng-show="search.length"
+               class="ion-android-close input-button"
+               ></i>
+        </label>
+
+    </ion-header-bar>
+
+    <ion-content class="stable-bg">
+        <div class=" listboard ">
+            <a href="">
+                <div class="listboard-head ">
+                    <div class=" left-green">
+                        根据您近日饮食及节气
+
+                        <i class="icon ion-chevron-right icon-accessory icon-right "></i>
+                    </div>
+                </div>
+            </a>
+            <div class="listboard-body ">
+                <div class="row green">
+                    <div class="col-20 col-top">
+                        <div class="col">两天内</div></div>
+                    <div class="col-80 ">
+                        <div class="col">维生素C摄入量低于标准34%</div>
+                        <div class="col">维生素C摄入量低于标准34%</div>
+                    </div>
+
+                    <br />
+                    <div></div>
+                </div>
+                <div class="row">
+                    <div class="col">建议摄入食材</div>
+                </div>
+              
+                <div class="row">
+                    <div class="rowline mid" >
+                        
+                        <div class="col-xs-4 "><div class="tag-greenwhite">苹果</div></div>
+                            <div class="col-xs-4 "><div class="tag-greenwhite">香蕉</div></div>
+                            <div class="col-xs-4 "><div class="tag-greenwhite">菠萝</div></div>
+                        
+                    </div>
+                   </div>
+            </div>
+        </div>
+        <div class=" listboard ">
+            <a href="#/tab/dash/aim">
+                <div class="listboard-head ">
+                    <div class=" left-green">
+                        我的饮食目标
+
+                        <i class="icon ion-chevron-right icon-accessory icon-right "></i>
+                    </div>
+                </div>
+            </a>
+            <div class="listboard-body ">
+                <div class="row">
+                    <div class="rowline mid">
+                        <div class="col-xs-4 " ng-repeat="aim in user.aims">
+                            <div class="tag-greenwhite">{{aim}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" left-green" style="margin:5px 0 0 0;">
+                    推荐食材
+                </div>
+                <ion-scroll direction="x">
+                    <div class="row" style="padding-left:0px ;padding-right:0px;">
+                        <div class="col" style="max-width:33%" ng-repeat="material in materials">
+                            <div class="tag-greenwhite">{{material}}</div>
+                        </div>
+
+                    </div>
+            </ion-scroll>
+        </div>
+ 
+</div>
+        <div class="listboard">
+            <a href=" #tab/dash/today">
+                <div class="listboard-head ">
+                    <div class=" left-green">
+                        今日状态
+                        <i class="icon ion-chevron-right icon-accessory icon-right "></i>
+                    </div>
+                </div>
+            </a>
+            <div class="listboard-body ">
+                <div class="row s-font " style="padding-top:0">
+                    <div class="col" style="padding-top:0">
+                        <div class="rowline mid">碳水化合物</div>
+                        <div class="rowline mid">70%</div>
+                    </div>
+                    <div class="col " style="padding-top:0">
+                        <div class="rowline mid">蛋白质</div>
+                        <div class="rowline mid">70%</div>
+                    </div>
+                    <div class="col " style="padding-top:0">
+                        <div class="rowline mid">脂肪</div>
+                        <div class="rowline mid">70%</div>
+                    </div>
+                    <div class="col " style="padding-top:0">
+                        <div class="rowline mid">总热量</div>
+                        <div class="rowline mid">70%</div>
+                    </div>
+                    </div>
+              
+
+            </div>
+
+        </div>
+
+
+
+
+    </ion-content>
+   
+</ion-view>
+

@@ -1,0 +1,95 @@
+<ion-view view-title="基本信息" style="top:0;bottom :0;left :0;right :0;width:100%" hide-tabs>
+    <ion-nav-bar class="bar-health bar-balanced bar-stable  bar ">
+        <ion-nav-back-button>
+
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="stable-bg">
+        <ion-list >
+            <ion-item class="item item-input" >
+                <span class="input-label">年龄</span>
+                <div class="col-50" type="text" style="text-align:right;padding-right:24px;">{{age}}</div>岁
+               
+
+
+            </ion-item>
+            <label class="item item-input" type="item-text-wrap">
+                <span class="input-label">身高</span>
+                <input class="col-50" type="text" style="text-align:right;" ng-model="user.height">CM
+
+            </label>
+            <label class="item item-input" type="item-text-wrap">
+                <span class="input-label">体重</span>
+                <input class="col-50" type="text" style="text-align:right;" ng-model="user.weight">KG
+
+            </label>
+            
+            <ion-item class=" item-icon-right " type="item-text-wrap" style="background-color:#3FB869;color:#fff;border:none;font-size:16px;">
+
+                <div class="col-center ">BMI指数</div>
+                <i class=" icon ion-ios-help-outline "></i>
+
+
+            </ion-item>
+            <ion-item type="item-text-wrap" style="background-color:#3FB869;color:#fff;border:none;padding-top:0;">
+                <div class="row " style=" align-content:center;text-align:center;">
+                    <div style="margin :auto ">
+                        <span style="font-size:48px;">93.9</span><br />
+                        <span style="font-size:16px;">状态极好</span><br />
+                        <span style="font-size:10px;">更新时间 2015.11.8</span>
+
+                    </div>
+
+                </div>
+            </ion-item>
+
+
+            <ion-item class="" type="">
+                <div class="row ">
+                    <div class="row-title row" style=" color:#3FB869">我的运动状况</div>
+                </div>
+
+
+                <label class="item item-input row" style="width:100%;margin :0;border :none ;">
+                    <span class="col-25">每天运动</span>
+                    <input type="number" min="0" max="24" step="0.5" placeholder="0">
+                    <span class="col-20" style=" float :right ">小时</span>
+                </label>
+                <label class="item item-input item-select row" style="width:100%;margin :0;border :none ;">
+                    <div class="input-label">
+                        主要项目
+                    </div>
+                    <select>
+                        <option selected>步行</option>
+                        <option>跑步</option>
+                        <option>游泳</option>
+                        <option>骑车</option>
+                        <option>登山</option>
+                        <option>爬楼梯</option>
+                        <option>静坐</option>
+                        <option>卧床休息</option>
+                        <option>跳舞</option>
+                        <option>办公室工作</option>
+                        <option>烹调</option>
+                    </select>
+                </label>
+
+
+            </ion-item>
+            <ion-item class="" type="">
+                <div class="row ">
+                    <div class="row-title row" style=" color:#3FB869">根据营养助手推荐</div>
+                </div>
+                <div class="row ">
+                    <div class="col-50 col-center">您每天身体消耗</div><div class=" col" style=" color:#3FB869">1000   Kcal</div><div class="col">能量</div>
+                </div>
+
+
+
+
+
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

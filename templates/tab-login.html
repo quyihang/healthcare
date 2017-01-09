@@ -1,0 +1,45 @@
+<ion-view view-title="登录" style="top:0;bottom :0;left :0;right :0;width:100%">
+    <ion-nav-bar class="bar bar-health bar-balanced bar-stable  ">
+      
+    </ion-nav-bar>
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="tosignup()">
+            注册
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="stable-bg">
+       <form name="loginForm" ng-submit="submitForm()" novalidate>
+           <ion-item class="item-divider"></ion-item>
+          
+       
+           <!-- USERNAME -->
+          
+               <label class="item item-input-inset light-bg" ng-class="{ 'has-error' : loginForm.username.$invalid && !loginForm.username.$pristine }" >
+
+
+                   <span class="input-label">账号</span>
+                   <input type="text" name="username" class="form-control" ng-model="user.username" required>
+                   <i ng-show="user.username.length" class=" ion-android-close input-button" ng-click="clearname()"></i>
+               </label>
+        
+           
+           
+           <!-- PASSWORD -->
+           <label class="item item-input-inset light-bg" ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+               <span class="input-label">密码</span>
+               <input type="password" name="password" class="form-control" ng-model="user.password" required>
+               <i ng-show="user.password.length" class=" ion-android-close input-button" ng-click="clearpas()"></i>
+           </label>
+          
+        
+           <div class="padding">
+               <button class="button button-block button-balanced" ng-click="signIn(user)">
+                   登录
+               </button>
+               {{error_message}}
+           </div>
+    </form>
+       
+    </ion-content>
+</ion-view>
+ 

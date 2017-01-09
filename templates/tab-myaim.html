@@ -1,0 +1,45 @@
+<ion-view view-title="饮食目标" style="top:0;bottom :0;left :0;right :0;width:100%" hide-tabs>
+    <ion-nav-bar class="bar-health bar-balanced bar-stable  bar ">
+        <ion-nav-back-button>
+            返回
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content>
+        
+        <ion-list>
+              
+            <div class="padding ">
+                <div class="left-green" style=" margin-top :10px;margin-left:10px;padding-left :5px;font-size :14px;"> 我希望达到的饮食目标</div>
+            </div>
+            <div class=" margin-lr15 marginBottom5" style="display:flex;">
+                <div ng-repeat="item in activeaim as results" class=" aimcheck" ng-click="deleteaim($index)" style="margin :5px;align-content :center ;text-align :center;width :28% ">
+                    <span class="s-font ">{{item}}</span>
+                </div>
+                <div class="rowline" ng-if="results.length === 0">
+                    <div class="padding mid" style="height:42px;"> 请选择目标</div>
+
+                </div>
+            </div>
+            <ion-item class="paddingTop5">
+
+                <p class="row" style=" color:#3FB869">短期</p>
+                <div ng-repeat="item in shortitems" ng-click="setshortaim($index,item)" class=" aimcheck" style="margin :5px;align-content :center ;text-align :center;width :28% " ng-class="activeaim.indexOf(item)!=-1?'aimcheckactive':''">
+                    <span class="s-font ">{{item}}</span>
+                </div>
+
+                <p class="row" style=" color:#3FB869">长期</p>
+                <div class="rowline ">
+
+                    <div ng-repeat="item in items" ng-click="setaim($index,item)" class="  aimcheck " ng-class="activeaim.indexOf(item)!=-1?'aimcheckactive':''">
+                        <span class="s-font ">
+                            {{item}}
+                        </span>
+
+                    </div>
+                </div>
+            </ion-item>
+
+            </ion-list>
+</ion-content>
+</ion-view>

@@ -1,0 +1,63 @@
+<ion-view view-title="饮食状态" style="top:0;bottom :0;left :0;right :0;width:100%" hide-tabs>
+    <ion-nav-bar class="bar-health bar-balanced bar-stable  bar ">
+        <ion-nav-back-button>
+
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content>
+        <ion-list>
+           
+              
+                <label class="item item-input item-select">
+                    <span class="input-label">
+                        我的状态
+                    </span>
+                    <select ng-model="user.station" ng-change="getSta()" ng-init="data.station" ng-options="stationsel.name as stationsel.name for stationsel in stationsels"></select>
+                </label>
+       
+            <div class="listboard-head ">
+                <div class="left-green" style=" margin-top :10px;padding-left :5px;font-size :16px;">根据营养师建议</div>
+            </div>
+            <ion-item class="" type="">
+                
+                   
+                <div class="row" style=" color:#3FB869">您的三餐分配比为 </div>
+                    <div class="row">
+                        <div class="col">
+                            早餐30%
+                        </div>
+                        <div class="col">
+                            午餐30%
+                        </div>
+                        <div class="col">
+                            晚餐30%
+                        </div>
+                    </div>
+               <br>
+                <div class="row" style=" color:#3FB869">
+                    三大营养素占比为
+                </div>
+                    <div class="row">
+                        <div class="col-33">
+                            <div class=" col">碳水化合物</div>
+                            <div class=" col">50%</div>
+                        </div>
+                        <div class="col-33">
+                            <div class=" col">脂肪</div>
+                            <div class=" col">25%</div>
+                        </div>
+                        <div class="col-33">
+                            <div class=" col">蛋白质</div>
+                            <div class=" col">10%</div>
+                        </div>
+                    </div>
+               
+               
+              
+            </ion-item>
+
+           
+        </ion-list>
+    </ion-content>
+</ion-view>

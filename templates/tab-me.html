@@ -1,0 +1,76 @@
+<ion-view view-title="我的">
+    <ion-nav-bar class="bar-stable  bar-balanced bar  " style="text-align:left;color :#3FB869;">
+
+    </ion-nav-bar>
+    <ion-nav-buttons side="right">
+        <a class="button ion-person " href="#/tab/me/aboutme" style="border:none ;font-size:30px;"></a>
+    </ion-nav-buttons>
+        <ion-content class="stable-bg">
+            <ion-list >
+                <ion-item class="item-thumbnail-left " type="item-text-wrap">
+                    <img ng-src="{{user.img}}">
+                    <div class="row ">
+                        <div class="col-title col">
+                            <div class="col" style="font-size:14px;">{{user.name}}</div>
+                        </div>
+                        <div class="col">
+
+                            <button class="button button-block button-balanced button-small" ng-click="daka(item)" ng-class="{disabled:isChecked(item)}" style="margin-top :0;font-size:14px;">
+                                {{dakatext}}
+                            </button>
+                            <div class="col" style="font-size:14px;">打卡天数{{user.day}}天</div>
+
+                        </div>
+                    </div>
+                    
+
+                </ion-item>
+
+                <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/me/myinfo">
+                    <div class="col-center ">基本信息</div>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+                <ion-item type="item-text-wrap" style="background-color:#3FB869;color:#fff;padding-top:10px;padding-bottom:0;border-color:#808080">
+                    <div class="row " style=" align-content:center;text-align:center;">
+                        <div class="col" style="margin :auto ">
+                            <div style="font-size:14px;">饮食状态</div>
+                            <div class="row" style="justify-content: center ">
+                                <div class=" tag-aim " style="width:30%;padding:5px;">
+                                    {{user.station}}
+                                </div>
+                            </div>
+                            <div style="font-size:10px;">开始时间 {{user.stadate}} </div>
+
+                        </div>
+
+                    </div>
+                </ion-item>
+                <ion-item type="item-text-wrap" style="background-color:#3FB869;color:#fff;border-color:#808080;padding:0;">
+                    <div class="row " style=" align-content:center;text-align:center;">
+                        <div class="col" style="margin :auto ">
+
+                            <span style="font-size:14px;">饮食目标</span><br />
+                            <div class="row" style="justify-content: center ">
+                                <div class="tag-aim " ng-repeat="aim in user.aims" style="width:30%;padding:5px;">{{aim}}</div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </ion-item>
+                <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/me/myaim">
+                    <div class="col-center ">目标管理</div>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+                <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/me/mysta">
+                    <div class="col-center ">好食分析</div>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+                    <ion-item class="item-divider"></ion-item>
+                    <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/login">
+                        <div class="col-center red ">退出登录</div>
+
+                    </ion-item>
+            </ion-list>
+        </ion-content>
+</ion-view>

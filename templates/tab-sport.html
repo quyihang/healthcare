@@ -1,0 +1,37 @@
+<ion-view view-title="运动">
+    <ion-nav-bar class="bar-health bar-balanced bar-stable  bar ">
+        <ion-nav-back-button>
+
+        </ion-nav-back-button>
+    </ion-nav-bar>
+ 
+
+    <ion-content class="stable-bg" style="bottom:60px; ">
+        <ion-list >
+            <ion-item class=" item-divider item-borderless stable-bg">
+            </ion-item>
+        <ion-item class="" type="item-text-wrap">
+            <div class="col-center col mid marginBottom10 "><span class="green xl-font">为达到[{{user.station}}]目标</span></div>
+            <div class=" marginBottom5 row"style="justify-content:space-between"><div>今日应运动消耗</div><div><span class="green">{{user.qk}}</span>   千卡</div></div>
+            <div class=" marginTop5  row" style="justify-content:space-between"><div>目前运动消耗 </div><div><span class="green">{{user.nowqk}}</span>  千卡</div></div>
+</ion-item>
+        <div class="listboard-head ">
+            <div class="left-green" style="padding-left :5px;font-size :16px; margin-top:10px;margin-bottom:10px;">运动记录</div>
+        </div>
+            <div class="padding-left list-thin " ng-repeat="item in sports.items">
+
+                <div class="col padding-left">{{item.name}}</div>
+                <div class="col padding-left ">{{item.time}}分钟</div> <!-- 需更改 -->
+                <div class="col padding-left">{{item.costqk}}千卡</div>
+
+
+            </div>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar class="row stable-bg" style="justify-content: center;bottom:60px;z-index: 5; ">
+        <a style="width:35%;align-content:center;vertical-align:central;border:none;border-radius:15px;" class=" button-balanced button " href="#/tab/sport/add">
+            <i class="icon ion-plus-round icon-accessory"></i>
+        </a>
+    </ion-footer-bar>
+</ion-view>
+

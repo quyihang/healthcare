@@ -1,0 +1,77 @@
+<ion-view view-title="">
+    <ion-nav-bar class="bar-balanced bar-stable  bar " style="text-align:left;color :#3FB869;">
+        <ion-nav-back-button>
+               返回
+            </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="stable-bg">
+        <div class="">
+            <div class="padding gray-border-bottom light-bg">
+                <div class="row" style="justify-content:space-between;font-size:16px;">
+                    <div class="col-33">当前选择</div>
+
+                    <div class="col-33 mid " ng-click="Openmeal()">{{ selectmeal }}
+                        <i class="fa  green" ng-class="isOpen() ? 'fa-chevron-up' : 'fa-chevron-down'" style="right:18px;position:absolute;margin-top:2px;"></i></div>
+                    </div>
+                  </div>
+            <div ng-show="isOpen()" class="rowline light-bg " style="position:absolute;width:32%;border-radius:5px;padding-top:3px ;right :15px;margin-top:2px;">
+                <div class="select-thin mid" ng-repeat="item in meals" ng-click="selcanteen({{item.id}})" ng-class="ismealSelected({{item.id}})?'active':''">
+                    {{ item.text }}
+                </div>
+            </div>
+
+              
+           
+        </div>
+        <div class="row">
+            <div class="canteen-head row">
+                <div class=" col-10 col-center" style="padding-top:10px;">
+                    <img src=" img/bookred.png" style="width :100%" />
+                </div>
+                <div class="col-offset-10   col-80">
+                    <div class=" row" style="color :black ;font-size:16px;">同济食堂</div>
+                    <div class=" row" style="color :grey ;font-size:14px;">食在同济，美味健康。</div>
+
+                </div>
+            </div>
+        </div>
+ 
+                <div class="list">
+                    <div class=" light-bg rowline" style="border-bottom:1px solid #ddd;border-top:1px solid #ddd;padding-left:5px;padding-right:5px;">
+                        <ion-scroll direction="x" class="list-item">
+                            <div class="rowline" style=" display: flex;">
+                                <button class=" canteen-button " ng-class="{'active':isSelected($index)}"
+                                        style="" ng-repeat="canteen in canteens" ng-click="getcanteen($index)">
+                                    {{ canteen.name }}
+                                </button>
+                            </div>
+                        </ion-scroll>
+                    </div>
+                </div>
+
+
+                <div style="padding-left:10px;padding-right:10px;border-radius:10px;">
+
+                    <ion-item class="item-icon-right" type="item-text-wrap">
+                        <a href="#/tab/book/floor/{{floor.id}}" ng-repeat="floor in floors track by $index" style=" text-decoration :none ;">
+
+                            <div class="col  item-icon-right canteen " type="item-text-wrap">
+                                <div class="col-33 canteenbar linkblk">{{ floor.name }}</div>
+                            </div>
+                        </a>
+                    </ion-item>
+                </div>
+                <div class="row">
+                    <div class="canteen-head row">
+                        <div class=" col-10 col-center" style="padding-top:10px;">
+                            <img src=" img/bookyellow.png" style="width :100%" />
+                        </div>
+                        <div class="col-offset-10   col-80">
+                            <div class=" row" style="color :black ;font-size:16px;">自定义餐厅</div>
+                            <div class=" row" style="color :grey ;font-size:14px;">自定义添加</div>
+
+                        </div>
+                    </div>
+                </div>
+    </ion-content>
+</ion-view>

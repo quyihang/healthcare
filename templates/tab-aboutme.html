@@ -1,0 +1,125 @@
+<ion-view view-title="我的个人信息"align-title="left" style="top:0;bottom :0;left :0;right :0;width:100%" hide-tabs>
+    <ion-nav-bar class="bar-health bar-balanced bar-stable  bar ">
+        <ion-nav-back-button class="button-clear">
+            返回
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="stable-bg">
+        <ion-list >
+            <ion-item class="item-avatar-right" item-icon-right" type="item-text-wrap" ng-click="actshow()">
+                <img ng-src="{{user.img}}">
+                <div class="row ">
+                    <div class="col-title col">
+                        <div class="col col-center ">头像</div>
+                    </div>
+
+                </div>
+
+
+
+            </ion-item>
+            <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/me/aboutme/name">
+                <span class="col-50" style=" float :right ;text-align:right " >{{user.name}}</span>
+                <div class="col-center ">昵称</div>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+          
+            <ion-item class="item-icon-right">
+                <span class="col-50" style=" float :right ;text-align:right ">{{user.idcode}}</span>
+                 <div class="col-center ">账户名</div>
+
+            </ion-item>
+            <ion-item class="item-divider"></ion-item>
+
+
+            <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/me/aboutme/uni">
+                <span class="col-50" style=" float :right ;text-align:right ">{{data.uni || user.uni}}</span>
+                <div class="col-center ">学校</div>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/me/aboutme/state">
+                <span class="col-50" style=" float :right ;text-align:right ">{{user.state}}</span>
+                <div class="col-center ">签名</div>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-divider"></ion-item>
+            <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/me/aboutme/gender">
+                <span class="col-50" style=" float :right ;text-align:right ">{{data.gender || user.gender }}</span>
+                <div class="col-center ">性别</div>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/me/aboutme/date">
+                <span class="col-50" style=" float :right ;text-align:right "> {{ data.birth | date:'yyyy MMMM dd'}}</span>
+                <div class="col-center ">生日</div>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+           
+             </ion-item>
+
+
+
+            <!--   <ion-item class="" type="">
+                        <div class="row">
+
+
+                            <div class="row-title col-33 col-center ">性别</div>
+                            <label class="col-33 item item-radio" style="text-align  :center ;margin:auto;border : 1px solid #3FB869; border-bottom-left-radius :7px; border-top-left-radius :7px;" >
+                                <input type="radio" name="gender" checked>
+                                <div class="item-content " style=" padding-top:5px;padding-bottom:5px;">男</div>
+        </label>
+                            <label class="col-33 item item-radio" style="text-align  :center ;margin:auto;border : 1px solid #3FB869; border-bottom-right-radius :7px; border-top-right-radius :7px;">
+                                <input type="radio" name="gender" >
+                                <div class="item-content" style=" padding-top:5px;padding-bottom:5px;">女 </div>
+
+        </label>
+                        </div>
+
+
+
+
+                    </ion-item>
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            大学
+                        </div>
+                        <select>
+                            <option selected>同济大学</option>
+                            <option >复旦大学</option>
+                            <option>上海交大</option>
+                        </select>
+                    </label>
+
+                    <label class="item item-input ">
+                        <span class="col-25">个性签名</span>
+                        <input type="text" placeholder="签名">
+                    </label>
+                </ion-list>
+                <ion-list>
+                    <ion-item class="item-icon-right" type="item-text-wrap" ng-click="actshow()">
+
+                        <div class="row ">
+                            <div class="col-title col">
+                                <div class="col col-center ">账户名</div>
+                            </div>
+
+                        </div>
+
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+
+                    </ion-item>
+                    <ion-item class="item-icon-right" type="item-text-wrap" ng-click="actshow()">
+
+                        <div class="row ">
+                            <div class="col-title col">
+                                <div class="col col-center ">账户名</div>
+                            </div>
+
+                        </div>
+
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+
+                    </ion-item>   -->
+        </ion-list>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,58 @@
+<ion-view view-title="今日营养素" hide-tabs>
+    <ion-nav-bar class="bar-health bar-balanced bar-stable  bar ">
+        <ion-nav-back-button>
+            返回
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+
+    <ion-content class="light-bg" >
+        <ion-list>
+            <section id="cd-timeline" class="cd-container" style="font-family:'Adobe Heiti Std';">
+
+                <div class="cd-timeline-block" ng-repeat="item in nutritions">
+                    <div class="cd-timeline-icon text-center" ng-class="{{item.status}} ? 'food-yellow':'food-green'">
+                        <i class="icon ion-heart"></i>
+                    </div>
+                    <!-- cd-timeline-img               所有数据从后台提取,微量元素数据结构待讨论，先写着 -->
+                    <div class="cd-timeline-content ">
+                        <div class="l-font row">
+                            <div class=" col-66">{{item.name}}  摄入</div><div class="col-33 " ng-class="{{item.status}} ? 'yellow':'green'">{{item.state}}</div>
+                        </div>
+                        <div class="marginTop5 row gray">carbohydrate</div>
+
+                    </div>
+                </div>
+               
+                <div class="cd-timeline-block">
+                    <div class="cd-timeline-icon text-center food-red ">
+                        <i class="icon ion-chatbox"></i>
+                    </div>
+                    <!-- cd-timeline-img -->
+                    <div class="cd-timeline-content ">
+                        <div class="l-font row">
+                            <div class=" col-66">微量元素统计  摄入</div>
+                        </div>
+                        <div class="l-font row marginTop10 red">
+                            <div class=" col-66 marginBottom5">摄入过量：</div>
+                        </div>
+                        
+                            <div class="row"><span class="red ">纳</span>&nbsp&nbsp建议</div>
+                            <div class="row">食用海带等食品</div>
+                       
+                        <div class="l-font row marginTop10 violet">
+                            <div class=" col-66 marginBottom5">摄入不足：</div>
+                        </div>
+                      
+                        <div class="row"><span class="violet ">维生素C</span>&nbsp&nbsp建议</div>
+                            <div class="row">食用新鲜水果</div>
+                      
+                    </div>
+                </div>
+            </section>
+        </ion-list>
+    
+    </ion-content>
+   
+</ion-view>
+
